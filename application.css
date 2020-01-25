@@ -1,0 +1,149 @@
+html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-family: inherit; 
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+  list-style: none;
+}
+
+@font-face {
+  font-family: 'gameplay';
+  src: url(./fonts/gameplay.ttf); 
+}
+
+@font-face {
+  font-family: 'pixeled';
+  src: url(./fonts/pixeled.ttf); 
+}
+
+body {
+  background: black;
+}
+
+h1 {
+  font-size: 30px;
+  font-family: gameplay;
+  letter-spacing: 3px;
+  color: white;
+  width: 440px;
+  margin: 50px auto 20px auto;
+}
+
+.instructions {
+  font-family: pixeled;
+  font-size: 10px;
+  color: white;
+  width: 330px;
+  width: 440px;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+#main {
+  width: 600px;
+  margin: 30px auto;
+}
+
+.row {
+  width: 450px;
+  margin: 0 auto;
+}
+
+.tile {
+  float: left;
+  margin: 5px;
+  height: 40px;
+  width: 40px;
+  border-radius: 3px;
+  background: #BF268A;
+}
+
+.tile:hover {
+  cursor: pointer;
+  background: #F2913D;
+}
+
+.explored, .flagged, .bombed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: gameplay;
+  font-size: 20px;
+  color: white;
+}
+
+.explored, .bombed {
+  background: #F26E50;
+}
+
+.flagged {
+  background: #F2C029;
+}
+
+.modal-screen {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .5);
+}
+
+.modal-screen.won {
+  background-image: url(./images/confetti.gif);
+  background-size: contain;
+}
+
+.modal-screen.lost {
+  background-image: url(./images/explosions.gif);
+  background-size: cover;
+}
+
+.modal-content {
+  z-index: 2;
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  top: 30%;
+  background: white;
+  border-radius: 5px;
+  border: 3px solid black;
+  padding: 30px;
+  text-align: center;
+}
+
+.modal-content > p {
+  text-transform: uppercase;
+  font-family: gameplay;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.modal-content button {
+  margin: 20px 0 0 0;
+  text-transform: uppercase;
+  font-family: gameplay;
+  font-size: 16px;
+  letter-spacing: 2px;
+  background: #F2B705;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 3px;
+}
+
+.modal-screen button:hover {
+  background: #36BF66;
+  cursor: pointer;
+}
