@@ -28,25 +28,31 @@ span, article, footer, time, small {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: 5%; 
   background: black;
 }
 
 h1 {
-  font-size: 30px;
-  font-family: gameplay;
+  font-size: 2em;
+  font-family: 'gameplay';
   letter-spacing: 3px;
   color: white;
-  width: 440px;
-  margin: 50px auto 20px auto;
+  /* width: 440px; */
+  /* margin: 50px auto 20px auto; */
 }
 
 .instructions {
-  font-family: pixeled;
+  font-family: 'pixeled';
   font-size: 10px;
   color: white;
-  width: 330px;
-  width: 440px;
-  margin: 0 auto;
+  /* width: 330px;
+  width: 440px; */
+  /* margin: 0 auto; */
   text-transform: uppercase;
 }
 
